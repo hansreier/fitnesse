@@ -1,0 +1,6 @@
+!contents -R2 -g -p -f -h!1 Test suite X
+
+
+|>ReiersTestSlim|A simple SLIM test|
+|>RestTestSlim|
+|>RestTestSlim2|

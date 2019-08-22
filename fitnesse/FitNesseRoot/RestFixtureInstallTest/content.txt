@@ -1,0 +1,9 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+
+!path C:/RestFixture-4.0/lib/*
+!path C:/RestFixture-4.0/smartrics-RestFixture-4.0.jar
+!path C:/slf4j/slf4j-simple-1.6.6.jar
+
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8080 |
+| GET | /RestFixtureInstallTest?rss | | | //title[text()='RestFixtureInstallTest']|

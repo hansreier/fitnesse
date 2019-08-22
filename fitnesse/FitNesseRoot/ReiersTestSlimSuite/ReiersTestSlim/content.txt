@@ -1,0 +1,18 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+!path /git/work/fitnesseSimpleSlimTest/target/classes
+
+|Import|
+|decisionTable|
+
+!|Add Strings|
+|input1|input2|output?|
+|you|are|you are|
+|family|guy|family guy|
+|tests|enough|tests enough|
+
+!|Multiplication|
+|operand1|operand2|product?|
+|3|5|15|
+|4|6|24|
+|2|3|7|
