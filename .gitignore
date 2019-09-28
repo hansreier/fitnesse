@@ -8,7 +8,10 @@ target/
 #ignore all files ending with ~
 *~
 #ignore project, classpath and settings file
-#removed because problems when not fetching eclipse settings.
+#can cause problems with Eclipse
+.classpath
+.project
+
 #.project
 #.classpath
 #.factorypath
@@ -32,5 +35,3 @@ target/
 /fitnesse/FitNesseRoot/RerunLastFailures.wiki
 .jar
 
-.classpath
-.project
