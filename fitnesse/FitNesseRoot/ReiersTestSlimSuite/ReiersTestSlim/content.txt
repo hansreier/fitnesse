@@ -2,6 +2,7 @@
 !define TEST_SYSTEM {slim}
 !path /git/fitnesse/fitnesseSimpleSlimTest/target/classes
 
+
 |Import|
 |decisionTable|
 
