@@ -28,5 +28,9 @@ target/
 /fitnesse/FitNesseRoot/FitNesse
 /fitnesse/FitNesseRoot/files/testResults
 
+#Ignore rerunLastFailures.wiki
+/fitnesse/FitNesseRoot/RerunLastFailures.wiki
 .jar
 
+.classpath
+.project

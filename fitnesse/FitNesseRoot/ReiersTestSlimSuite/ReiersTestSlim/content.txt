@@ -1,6 +1,6 @@
 !contents -R2 -g -p -f -h
 !define TEST_SYSTEM {slim}
-!path /git/work/fitnesseSimpleSlimTest/target/classes
+!path /git/fitnesse/fitnesseSimpleSlimTest/target/classes
 
 |Import|
 |decisionTable|

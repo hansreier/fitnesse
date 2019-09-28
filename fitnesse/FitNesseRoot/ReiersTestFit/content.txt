@@ -1,6 +1,6 @@
 !contents -R2 -g -p -f -h
 !define TEST_SYSTEM {fit}
-!path /git/work/fitnesseSimpleFitTest/target/classes
+!path /git/fitnesse/fitnesseSimpleFitTest/target/classes
 
 |Import|
 |fitnesseSimpleFitTest|
