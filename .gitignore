@@ -33,5 +33,4 @@ target/
 
 #Ignore rerunLastFailures.wiki
 /fitnesse/FitNesseRoot/RerunLastFailures.wiki
-.jar
-
+*.jar
