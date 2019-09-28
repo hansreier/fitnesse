@@ -1,0 +1,18 @@
+!1 Welcome to [[FitNesse][FitNesse.FitNesse]]!
+!3 ''The fully integrated stand-alone acceptance testing framework and wiki.''
+# Here is a good place to add your first page (WikiWord). For example, MyTopLevelApplicationPage
+
+To add your first "page", click the [[Edit][.FrontPage?edit]] button and add a [[!-WikiWord-!][.FitNesse.UserGuide.FitNesseWiki.WikiWord]] to the page.
+Close Fitnesse Server: http://localhost:8081/?responder=shutdown
+
+StaticInformationPage
+
+| '''To Learn More...''' |
+| [[Fitnesse main page][Fitnesse]] | ''Answer the rest of your questions here.'' |
+| [[Fitnesse main page2][>Fit.Fitnesse]] | ''Just another way to link to same page.'' |
+| [[Reier test slim][>ReierTestSlim]] | ''A direct symbolic link'' |
+| ReiersTestFit | Reiers Test Page fit |
+| ReiersTestSlimSuite | Reiers Test Suite slim |
+| [[Rest fixture live doc][>LiveDoc]] | ''live documentation of Rest Fixture'' |
+
+!note Release ${FITNESSE_VERSION}

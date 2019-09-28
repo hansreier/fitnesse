@@ -1,0 +1,36 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+!define slim.port {8091}
+!define slim.pool.size {10}
+!define slim.debug.timeout {60}
+#!define manually.start.test.runner.on.debug {true}
+#Classpath points to classes folders
+#Import points to subfolders in the classes folder or subsubfolders with .notation
+#The *.class files resides inn .../target/classes/decisionTable/*.class
+
+
+
+|Comment                 |'''Important global environment variables'''|
+|Fitnesse port           |${FITNESSE_PORT}|
+|Fitnesse classes        |${FITNESSE_CLASSES}|
+|Fitnesse dependencies   |${FITNESSE_DEPENDENCIES}|
+|Project root            |${PROJECT_ROOT}|
+|Fitnesse root parent    |${FITNESSE_ROOT_PARENT}|
+
+#!path ${FITNESSE_CLASSES}
+#!path ${FITNESSE_DEPENDENCIES}\*
+
+|Import|
+|decisionTable|
+
+!|Add Strings|
+|input1|input2|output?|
+|you|are|you are|
+|family|guy|family guy|
+|tests|enough|tests enough|
+
+!|Multiplication|
+|operand1|operand2|product?|
+|3|5|15|
+|4|6|24|
+|2|3|6|

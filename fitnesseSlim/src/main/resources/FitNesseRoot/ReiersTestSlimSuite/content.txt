@@ -1,0 +1,17 @@
+!contents -R2 -g -p -f -h
+
+${FITNESSE_CLASSES}
+${FITNESSE_DEPENDENCIES}
+${PROJECT_ROOT}
+${FITNESSE_ROOT_PARENT}
+
+!path ${FITNESSE_CLASSES}
+!path ${FITNESSE_DEPENDENCIES}\*
+
+Classpath points to classes folders
+Import points to subfolders in the classes folder or subsubfolders with .notation
+The *.class files resides inn .../target/classes/decisionTable/*.class
+
+|[[Just a little test that slim works][>ReiersTestSlim]]|A simple SLIM test|
+|[[My first rest test][>RestTestSlim]]|Test|
+

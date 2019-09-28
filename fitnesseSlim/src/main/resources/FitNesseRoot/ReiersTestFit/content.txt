@@ -1,0 +1,17 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {fit}
+
+!path ${FITNESSE_CLASSES}
+!path ${FITNESSE_DEPENDENCIES}\*
+
+#Neither Import or complete path requied in this case
+#|Import|
+#|fitnesseSimpleFitTest|
+#use import or complete path
+#!|fitnesseSimpleFitTest.MultiplicationFixture|
+!|MultiplicationFixture|
+|operand1      |operand2      |product?      |
+|1             |1             |1             |
+|5             |5             |25            |
+|7             |6             |42            |
+|8             |9             |71            |

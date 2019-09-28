@@ -1,0 +1,17 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+
+The test calls itself with Rest calls!
+---------------------------
+Note:
+The below variables could be used, to make the test not dependent of location in FITNESSE tree
+The problem is that Fitnesse believes this is a new page or link
+Using !-!- -! -! as protection does not help since then the symbol is treated as plain text
+You are welcome to find a solution.
+
+${PAGE_NAME}
+${PAGE_PATH}
+-----------------------------
+
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:${FITNESSE_PORT} |
+| GET | /ReiersTestSlimSuite.RestFixtureInstallTest?rss | | | //title[text()='ReiersTestSlimSuite.RestFixtureInstallTest']|

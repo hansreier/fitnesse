@@ -1,0 +1,9 @@
+---
+Help: About Reier Fitnesse
+---
+!contents -R2 -g -p -f -h
+
+This is a static information page.
+Mer informasjon for å se om versjonskontroll virker.
+Lagt til mer info for å se om versonskontroll..
+ENda mer info...
