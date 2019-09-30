@@ -61,7 +61,7 @@
 	<dependency>
 		<groupId>smartrics.restfixture</groupId>
 		<artifactId>smartrics-RestFixture</artifactId>
-		<version>3.0</version>
+		<version>4.4</version>
 	</dependency>
     <!-- Add dependency for JUnitParams -->
     <dependency>
