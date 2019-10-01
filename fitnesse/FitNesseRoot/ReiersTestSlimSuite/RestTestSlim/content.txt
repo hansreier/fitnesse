@@ -2,24 +2,19 @@
 
 !define TEST_SYSTEM {slim}
 
-!path C:/git/RestFixture/target/dependencies/*
-!path C:/git/RestFixture/target/smartrics-RestFixture-4.1-SNAPSHOT.jar
+!path C:/git/fitnesse/fitnesseSlim/target/dependencies/*
+!path C:/git/fitnesse/fitnesseSlim/target/fitnesseSlim-0.0.1-SNAPSHOT.jar
 
-#!path C:/RestFixture-4.0/smartrics-RestFixture-4.0.jar
-#!path C:/RestFixture-4.0/lib/*
-!path C:/slf4j/slf4j-simple-1.6.6.jar
+#timeout in milliseconds (10 seconds here)
+|Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig|
+|http.client.connection.timeout       |10000|
 
-|Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig| 
-|http.client.connection.timeout |300000 |
-
-|Table:smartrics.rest.fitnesse.fixture.RestFixture |http://maps.googleapis.com|
-| GET |!- /maps/api/geocode/xml?address=1600 Amphitheatre Parkway, Mountain View, CA & sensor=false -!| | | |
-#|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://maps.googleapis.com |
-#| GET |!-/maps/api/geocode/xml?address=1600 Amphitheatre Parkway-!| | | |
-
+#comment
 #|VERB|uri|?ret|?headers|?body|
 
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | https://ws.geonorge.no/adresser/v1 |
+| GET |!-/sok?sok=Almeveien+11-!| 200 | | |
 
-#|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8080 |
-#| GET | /RestFixtureInstallTest?rss | | | //title[text()='RestFixtureInstallTest']|
 
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://www.sigmondsmart.com |
+| GET | | 200 | | |

@@ -2,5 +2,5 @@
 
 
 |>ReiersTestSlim|A simple SLIM test|
-|>RestTestSlim|
-|>RestTestSlim2|
+|>RestTestSlim|Tests REST with Smartrics|
+
