@@ -23,5 +23,5 @@ for /R %FITNESSE_DEPENDENCIES% %%a in (*.jar) do (
 set CLASSPATH=!CLASSPATH!"
 echo !CLASSPATH! 
 
-java -cp !CLASSPATH! fitnesseMain.FitNesseMain -p 8081 -d %FITNESSE_ROOT_PARENT% -e 2 -l C:/fitnesseLogs -v
+java -Dfile.encoding=UTF-8 -cp !CLASSPATH! fitnesseMain.FitNesseMain -p 8081 -d %FITNESSE_ROOT_PARENT% -e 2 -l C:/fitnesseLogs -v
 

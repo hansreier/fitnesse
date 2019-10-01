@@ -2,20 +2,20 @@
 
 !define TEST_SYSTEM {slim}
 
-#!path C:/git/RestFixture/target/dependencies/*
-#!path C:/git/RestFixture/target/smartrics-RestFixture-4.5-SNAPSHOT.jar
+!path C:/git/fitnesse/fitnesseSlim/target/dependencies/*
+!path C:/git/fitnesse/fitnesseSlim/target/fitnesseSlim-0.0.1-SNAPSHOT.jar
 
 #timeout in milliseconds (10 seconds here)
 |Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig| 
 |http.client.connection.timeout       |10000|
-#|http.client.use.new.http.uri.factory | true |
-#Bugfix above does something with the spaces, request is sent, but something is still wrong
-#Get rid of the spaces with &nsbp is the solution
-#Tried &nsbp, did not work, use %20 (hex for space) instead. Why?
-#&amp for & works, but not required
+
+#comment
 #|VERB|uri|?ret|?headers|?body|
 
-#//title[text()='RestFixtureInstallTest']
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | https://ws.geonorge.no/adresser/v1 |
+| GET |!-/sok?sok=Almeveien+11-!| 200 | | |
 
-|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://maps.googleapis.com |
-| GET |!-/maps/api/geocode/xml?address=1600%20Amphitheatre%20Parkway,Mountain%20View%20,CA&sensor=false-!| 200 |Content-Type: application/xml |//formatted_address[text()='Google Bldg 42, 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA']|
+
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://www.sigmondsmart.com |
+| GET | | 200 | | |
+
