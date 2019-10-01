@@ -1,5 +1,5 @@
+|ReiersTestSlimSuite||21:40:42 Tue, Oct 01, 2019|
 |RestFixtureInstallTest||21:14:55 Tue, Oct 01, 2019|
-|ReiersTestSlimSuite||21:08:45 Tue, Oct 01, 2019|
 |ReiersTestSlimSuite.ReiersTestSlim||17:15:47 Tue, Oct 01, 2019|
 |ReiersTestFit||12:16:45 Sat, Sep 28, 2019|
 |ReiersTestSlimSuite.RestTestSlim||09:20:49 ti, feb. 23, 2016|
