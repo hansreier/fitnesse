@@ -1,9 +1,7 @@
 package fitnesseSlim;
 
 import static junit.framework.Assert.*;
-
 import org.junit.Test;
-
 import decisionTable.Multiplication;
 
 public class MultiplicationTest {

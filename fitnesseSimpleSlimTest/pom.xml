@@ -23,58 +23,80 @@
   				<artifactId>maven-jar-plugin</artifactId>
   				<version>2.4</version>
   			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<outputDirectory>${project.build.directory}/dependencies</outputDirectory>
+						</configuration>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+				</execution>
+			</executions>
+		</plugin>
   	</plugins>
   </build>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<slf4jVersion>1.6.1</slf4jVersion>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <slf4jVersion>1.7.25</slf4jVersion>
+	  <logbackVersion>1.2.3</logbackVersion>
   </properties>
 
   <dependencies>
    <!-- Add dependency for junit -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- dependency for slf4j and bind it to log4j -->
-    <dependency>
-    	<groupId>org.slf4j</groupId>
+	  <dependency>
+		  <groupId>junit</groupId>
+		  <artifactId>junit</artifactId>
+		  <version>4.8.1</version>
+		  <scope>test</scope>
+	  </dependency>
+    <!-- dependency for slf4j and bind it to logback -->
+	  <dependency>
+		<groupId>org.slf4j</groupId>
 		<artifactId>slf4j-api</artifactId>
 		<version>${slf4jVersion}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-log4j12</artifactId>
-		<version>${slf4jVersion}</version>
-	</dependency>	
-	<!-- logging log4j -->
-	<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>1.2.17</version>
-		<scope>runtime</scope>
-	</dependency>	
-	<!--  Restfixture -->
-	<dependency>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>ch.qos.logback</groupId>
+		  <artifactId>logback-classic</artifactId>
+		  <version>${logbackVersion}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>ch.qos.logback</groupId>
+		  <artifactId>logback-core</artifactId>
+		  <version>${logbackVersion}</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>jcl-over-slf4j</artifactId>
+		  <version>1.7.0</version>
+	  </dependency>
+
+	  <!--  Restfixture -->
+	  <dependency>
 		<groupId>smartrics.restfixture</groupId>
 		<artifactId>smartrics-RestFixture</artifactId>
 		<version>4.4</version>
-	</dependency>
-    <!-- Add dependency for JUnitParams -->
-    <dependency>
+	  </dependency>
+	  <!-- Add dependency for JUnitParams -->
+	  <dependency>
     	<groupId>pl.pragmatists</groupId>
       	<artifactId>JUnitParams</artifactId>
       	<version>1.0.3</version>
-    </dependency>
-    <!-- Add dependency for fitnesse -->
-    <dependency>
+	  </dependency>
+	  <!-- Add dependency for fitnesse -->
+	  <dependency>
     	<groupId>org.fitnesse</groupId>
     	<artifactId>fitnesse</artifactId>
     	<version>20151230</version>
     	<!-- scope>runtime</scope-->
-    </dependency>
+	  </dependency>
   </dependencies>
 </project>

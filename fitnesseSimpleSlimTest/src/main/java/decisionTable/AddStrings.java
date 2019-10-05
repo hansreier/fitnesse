@@ -1,6 +1,12 @@
 package decisionTable;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AddStrings {
+
+	private static final Logger log = LoggerFactory.getLogger(AddStrings.class);
+
 	private String input1;
 	private String input2;
 
@@ -13,6 +19,10 @@ public class AddStrings {
 	}
 
 	public String output() {
-		return input1 + " " + input2;
+		log.info("Arguments: {}, {} ", input1, input2);
+		String result;
+		result = input1 + " " + input2;
+		log.info("Concatenated: {} ", result);
+		return result;
 	}
 }
