@@ -2,8 +2,8 @@
 !contents -R2 -g -p -f -h
 !define TEST_SYSTEM {slim}
 
-!path C:/git/fitnesse/fitnesseSlim/target/dependencies/*
-!path C:/git/fitnesse/fitnesseSlimTest/target/*.jar
+!path C:/git/fitnesse/fitnesseSimpleSlimTest/target/dependencies/*
+!path C:/git/fitnesse/fitnesseSimpleSlimTest/target/*.jar
 
 |Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8080 |
 | GET | /RestFixtureInstallTest?rss | | | //title[text()='RestFixtureInstallTest']|
