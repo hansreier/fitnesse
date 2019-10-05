@@ -1,6 +1,7 @@
 !contents -R2 -g -p -f -h
 !1 Test suite X
 
-|>ReiersTestSlim|!-A simple SLIM test-!|
+|>ReiersTestSlim |!-A simple SLIM decisiontable test-!|
+|>ReiersTrainTrip|!-A simple SLIM scripttable test-!|
 |>RestTestSlim  |!-Tests REST with Smartrics-!|
 

@@ -6,14 +6,15 @@
 |Import|
 |decisionTable|
 
-!|Add Strings|
+|Add Strings|
 | input1    | input2    | output?     |
 | you       | are       | you are     |
 | family    |   guy     | family guy  |
 | tests     | enough    | tests enough|
 
-!|Multiplication|
+|Multiplication|
 | operand1 | operand2 | product?|
 | 3        | 5        | 15      |
 | 4        | 6        | 24      |
 | 2        | 3        | 7       |
+
