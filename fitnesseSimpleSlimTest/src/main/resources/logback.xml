@@ -3,7 +3,7 @@
 <configuration>
 
     <!-- local log file configuration -->
-    <property value="/git/fitnesseLogs" name="LOG_DIR"/>
+    <property value="/fitnesseLogs" name="LOG_DIR"/>
 
     <!-- APPLICATION LOGS -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -13,10 +13,10 @@
         </encoder>
     </appender>
     <appender name="APPLICATION" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_DIR}/MyLog.log</file>
+        <file>${LOG_DIR}/FitnesseSlim.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <maxIndex>5</maxIndex>
-            <fileNamePattern>${LOG_DIR}/MyLog.%i</fileNamePattern>
+            <fileNamePattern>${LOG_DIR}/FitnesseSlim.%i</fileNamePattern>
         </rollingPolicy>
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
             <MaxFileSize>10MB</MaxFileSize>
