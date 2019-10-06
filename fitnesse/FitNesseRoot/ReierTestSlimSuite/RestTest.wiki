@@ -1,10 +1,6 @@
-!contents -R2 -g -p -f -h
-
-!define TEST_SYSTEM {slim}
-
-!path C:/git/fitnesse/fitnesseSimpleSlimTest/target/dependencies/*
-!path C:/git/fitnesse/fitnesseSimpleSlimTest/target/*.jar
-
+---
+Help: A Rest test with Smartrics
+---
 #timeout in milliseconds (10 seconds here)
 |Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig|
 |http.client.connection.timeout       |10000|

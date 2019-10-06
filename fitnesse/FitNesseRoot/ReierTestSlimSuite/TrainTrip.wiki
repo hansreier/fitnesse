@@ -1,11 +1,7 @@
 ---
-Help: Reiers togreise fra Moelv til Oslo S
+Help: Reiers train trip
 Test
 ---
-!define TEST_SYSTEM {slim}
-!path /git/fitnesse/fitnesseSimpleSlimTest/target/classes
-!path /git/Fitnesse/fitnesseSimpleSlimTest/target/dependencies/*.jar
-
 !define name {Reier}
 
 |Import|

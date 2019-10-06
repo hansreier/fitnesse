@@ -1,8 +1,7 @@
-!contents -R2 -g -p -f -h
-!define TEST_SYSTEM {slim}
-!path /git/fitnesse/fitnesseSimpleSlimTest/target/classes
-!path /git/Fitnesse/fitnesseSimpleSlimTest/target/dependencies/*.jar
-
+---
+Help: This wiki page tests adding of String and Multiplication using a decisionTable
+Test
+---
 |Import|
 |decisionTable|
 
@@ -17,4 +16,3 @@
 | 3        | 5        | 15      |
 | 4        | 6        | 24      |
 | 2        | 3        | 7       |
-
