@@ -20,6 +20,7 @@ public class AddStrings {
 
 	public String output() {
 		log.info("Arguments: {}, {} ", input1, input2);
+		log.debug("This is a secret message");
 		String result;
 		result = input1 + " " + input2;
 		log.info("Concatenated: {} ", result);
