@@ -39,12 +39,7 @@
       <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- Add dependency for JUnitParams -->
-    <dependency>
-    	<groupId>pl.pragmatists</groupId>
-      	<artifactId>JUnitParams</artifactId>
-      	<version>1.0.3</version>
-    </dependency>
+
     <!-- Add dependency for fitnesse -->
     <dependency>
     	<groupId>org.fitnesse</groupId>

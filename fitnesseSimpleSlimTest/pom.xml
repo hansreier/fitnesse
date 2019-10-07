@@ -55,28 +55,11 @@
 		  <version>4.8.1</version>
 		  <scope>test</scope>
 	  </dependency>
-    <!-- dependency for slf4j and bind it to logback -->
-	  <dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>${slf4jVersion}</version>
-	  </dependency>
 
 	  <dependency>
 		  <groupId>ch.qos.logback</groupId>
 		  <artifactId>logback-classic</artifactId>
 		  <version>${logbackVersion}</version>
-	  </dependency>
-	  <dependency>
-		  <groupId>ch.qos.logback</groupId>
-		  <artifactId>logback-core</artifactId>
-		  <version>${logbackVersion}</version>
-	  </dependency>
-
-	  <dependency>
-		  <groupId>org.slf4j</groupId>
-		  <artifactId>jcl-over-slf4j</artifactId>
-		  <version>1.7.0</version>
 	  </dependency>
 
 	  <!--  Restfixture -->
@@ -85,18 +68,6 @@
 		<artifactId>smartrics-RestFixture</artifactId>
 		<version>4.4</version>
 	  </dependency>
-	  <!-- Add dependency for JUnitParams -->
-	  <dependency>
-    	<groupId>pl.pragmatists</groupId>
-      	<artifactId>JUnitParams</artifactId>
-      	<version>1.0.3</version>
-	  </dependency>
-	  <!-- Add dependency for fitnesse -->
-	  <dependency>
-    	  <groupId>org.fitnesse</groupId>
-    	  <artifactId>fitnesse</artifactId>
-		  <version>20190716</version>
-    	<!-- scope>runtime</scope-->
-	  </dependency>
+
   </dependencies>
 </project>
