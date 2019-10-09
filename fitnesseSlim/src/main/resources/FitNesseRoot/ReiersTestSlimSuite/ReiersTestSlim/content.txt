@@ -3,6 +3,7 @@
 !define slim.port {8091}
 !define slim.pool.size {10}
 !define slim.debug.timeout {60}
+#!define COMMAND_PATTERN {java -Dfile.encoding=UTF-8 -cp fitnesse.jar:%p %m }
 #!define manually.start.test.runner.on.debug {true}
 #Classpath points to classes folders
 #Import points to subfolders in the classes folder or subsubfolders with .notation
@@ -28,6 +29,8 @@
 |you|are|you are|
 |family|guy|family guy|
 |tests|enough|tests enough|
+|!-H&oslash;re-!|på|!-H&oslash;re på-!|
+|!-Høre-!|på|Høre på|
 
 !|Multiplication|
 |operand1|operand2|product?|

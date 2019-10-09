@@ -1,6 +1,7 @@
 !contents -R2 -g -p -f -h
 
 !define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dfile.encoding=UTF-8 -cp fitnesse.jar:%p %m }
 
 !path C:/git/fitnesse/fitnesseSlim/target/dependencies/*
 !path C:/git/fitnesse/fitnesseSlim/target/fitnesseSlim-0.0.1-SNAPSHOT.jar
@@ -13,9 +14,12 @@
 #|VERB|uri|?ret|?headers|?body|
 
 |Table:smartrics.rest.fitnesse.fixture.RestFixture | https://ws.geonorge.no/adresser/v1 |
-| GET |!-/sok?sok=Almeveien+11-!| 200 | | |
+| GET |!-/sok?sok=Almeveien+11-!| 200 |Content-Type : application/json |jsonbody.adresser[0].adressekode=="22010" && jsonbody.adresser[0].adressetekst=="Almeveien 11"|
 
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | https://ws.geonorge.no/adresser/v1 |
+| GET |!-/sok?sok=Sl&oslash;ttveien-!| 200 |Content-Type : application/json | |
 
+|
 |Table:smartrics.rest.fitnesse.fixture.RestFixture | http://www.sigmondsmart.com |
 | GET | | 200 | | |
 
