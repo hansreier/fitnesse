@@ -31,6 +31,7 @@
 					<execution>
 						<configuration>
 							<outputDirectory>${project.build.directory}/dependencies</outputDirectory>
+							<excludeArtifactIds>slf4j-jdk14</excludeArtifactIds>
 						</configuration>
 						<goals>
 							<goal>copy-dependencies</goal>
@@ -55,11 +56,16 @@
 		  <version>4.8.1</version>
 		  <scope>test</scope>
 	  </dependency>
-
-	  <dependency>
+      <!--cannot be used with Fitnesse-stand alone, so removed>-->
+	  <!--dependency>
 		  <groupId>ch.qos.logback</groupId>
 		  <artifactId>logback-classic</artifactId>
 		  <version>${logbackVersion}</version>
+	  </dependency-->
+	  <dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-jdk14</artifactId>
+		  <version>1.7.28</version>
 	  </dependency>
 
 	  <!--  Restfixture -->

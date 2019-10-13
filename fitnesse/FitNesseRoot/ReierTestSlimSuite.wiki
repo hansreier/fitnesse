@@ -5,12 +5,9 @@ Help: Reiers Slim Suite
 !contents -R2 -g -p -f -h
 !**< 
 !define TEST_SYSTEM {slim}
-#Tried to read logback configuration file. Does not work. Uses Java.util.logging and default setup. 
-#!define COMMAND_PATTERN {java -Dlogback.configurationFile=file:C:/fitnesseLogs/logback.xml -cp %p %m}
-#!define COMMAND_PATTERN {java  -Dlogging.config=C:/fitnesseLogs/logback.xml -cp %p %m}
+!define COMMAND_PATTERN {java  -Djava.util.logging.config.file=/fitnesseLogs/logging.properties -cp %p %m}
 !path /git/fitnesse/fitnesseSimpleSlimTest/target/classes
 !path /git/fitnesse/fitnesseSimpleSlimTest/target/dependencies/*
-!path /fitnesseLogs/logback.xml
 **!
 |>CalcTestSlim    |!-A simple SLIM decisionTable test-!|
 |>RestTest        |!-Tests REST with Smartrics-!       |
