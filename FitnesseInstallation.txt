@@ -1,0 +1,188 @@
+
+------------------------A--------------------------------------
+
+Java SDK 8 (1.8) must be installed
+https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+Windows x64
+
+JAVA_HOME windows environment variable must point to JDK installation directory
+(Advanced system settings, environment variables) in Control panel
+Can also be set in Windows PATH
+
+java -version in cmd windows verify
+
+-------------------------B-------------------------------
+
+Download Fitnesse
+http://docs.fitnesse.org/FrontPage
+Download fitnesse.standalone.jar to a catalog on your PC
+Type java -jar fitnesse-standalone.jar
+http://localhost
+The fitnesse wiki server is started
+You can browse it
+We are not going to use this test installation directly so 
+stop it with Ctrl C.
+
+-------------------------C--------------------------------
+
+download Maven build tool
+https://maven.apache.org/download.cgi
+
+M2_HOME windows environment variable must point to maven installation directory.
+Need also to set path to Maven installation directory/bin
+
+To verify that installed mvn --version i cmd
+
+-------------------------D-----------------------------------
+
+If desired download git (alternative use enclosed zipped project contents)
+...to be able to clone project from github. 
+Since it requires some knowledge and time to be used to git (I will not give instruction), you can skip it.
+https://git-scm.com/downloads
+
+-------------------------E--------------------------------
+
+Download source code:
+
+www.github.com/hansreier/fitnesse contains source code, or unzip fitnesse.zip
+Clone or download reposistory. Copy Link. Go to directory e.g. C:/git
+enter git clone https://github.com/hansreier/fitnesse.git in Windows cmd Window.
+Alternative use git bash window (installed when installing git). 
+
+A catalog with the source code C:/git/fitnesse is created. 
+
+The alternative is to unzip fitnesse.zip into that directory,
+
+--------------------------F--------------------------------
+
+download Intellij Ultimate.
+https://www.jetbrains.com/idea/download/#section=windows
+64 bit launcher, Create .java associtions.
+
+Run Intellij, Config or installation folder. 
+Recommendation: Somewhere on the C disk, not Program Files.
+Usually: Do not import settings.
+Default Plugins: Easiest is to enable all
+Build Tools: At least Maven
+Version Controls, git, github
+Evaluate (30 days or licence)
+
+--------------------------------G----------------------------
+
+Open project in Intellij
+C;/git/fitnesse
+
+But the various projects (modules) is not detected properly doing this.
+Usually in Intellij projects there is one main project with several modules that is loaded at once
+Since in this course the modules are independent Java projects we have to 
+set up each project individually as described below:
+
+--------------------------------H----------------------------
+
+Install fitnesse plugin first
+
+File, settings, plugins, Search for Fitnesse
+Select Plugin FitNesse (George Shakhnazaryan...)
+Install
+Restart IDE
+
+https://plugins.jetbrains.com/plugin/7908-fitnesse
+
+https://github.com/gshakhn/idea-fitnesse/wiki/Configuring-the-plugin
+
+---------------------------------I---------------------------
+car is a java project
+Right click on pom.xml and +Add as maven project.
+Select clean and install in the maven window to the upper right of the IDE
+Select JDK if required
+a simple project with som JUnit tests
+select test to run the unit tests
+
+--------------------------------J-----------------------------
+
+YOU CAN WAIT WITH THE REST OF THE INSTRUCTIONS UNTIL THE WORKSHOP
+(Or try it if you want)
+
+
+fitnesseSimpleFitTest is a Java project
+Right click on pom.xml and +Add as maven project.
+Select clean and install in the maven window to the upper right of the IDE
+Select JDK if required
+
+Run/Debug Configurations in Intellij
+Templates
+FitNesse
+FitNesse Root directory: FitNesseRoot
+Working directory: C:\git\fitnesse\fitnesse
+Use classpath of module:fitnesseSimpleSlimTest (Does not work for the fit test)
+Use FintNesse.jar bundlet with the plugin (recommended): Yes
+
+Run/Debug Configurations in Intellij
+Name: fitnesseSimpleFitTest
+FitNesse Root directory: FitNesseRoot
+Working directory: C:\git\fitnesse\fitnesse
+Wiki page name: ReiersTestFit
+Use classpath of module: fitNesseSimpleFitTest
+
+------------------------------K------------------------------
+
+fitnesseSimpleSlimTest is a Java project
+Right click on pom.xml and +Add as maven project.
+Select clean and install in the maven window to the upper right of the IDE
+Select JDK if required
+
+Run/Debug Configurations in Intellij
+Name: fitnesseSimpleSlimTest
+FitNesse Root directory: FitNesseRoot
+Working directory: C:\git\fitnesse\fitnesse
+Wiki page name: ReiersTestSlimSuite.ReiersTestSlim
+Use classpath of module: fitNesseSimpleSlimTest
+
+Run/Debug Configurations in Intellij
+Name: fitnesseTestSuite
+FitNesse Root directory: FitNesseRoot
+Working directory: C:\git\fitnesse\fitnesse
+Wiki page name: ReiersTestSlimSuite
+Use classpath of module: fitNesseSimpleSlimTest
+
+-------------------------------L-----------------------------
+
+fitnesseSlim is a Java project that also includes Fitnesse Wiki pages.
+The Java fixtures is actually the same as in fitnesseSimpleFitTest and fitnesseSimpleSlim test
+This setup is more complex. The advantage is the Fitnesse tests can be run as JUnit tests in this setup.
+
+NOT RECOMMENDED: Right click on pom.xml and +Add as maven project.  Syntext highligting in editor does not work properly after this. 
+(Due to multiple instances of the same classes)
+RECOMMENDED:
+Enter File, open  in Intellij, point to the pom file, open the project in a separate Window.
+
+Select clean and install in the maven window to the upper right of the IDE
+Select JDK if required
+Run maven clean install (in maven window)
+Run MultiplicationTest in fitnesseSlim - A regular unit test (no Fitnesse)
+Run test in Fitnessse.junit - runs all the Fitnesse tests as unit tests.
+Run fitnesse.bat - starts fitnesse server on 8081
+http://localhost:8081 and you enter the Fitnesse Wiki GUI in the usual way.
+
+-----------------------------M-------------------------------
+
+fitnesse project contains the wiki pages for fitnesseSimpleFitTest and fitNesseSimpleSlimTest.
+Running start.bat starts the Fitnesse wiki server. 
+Note: It is possibe that the plugins Bacth Scripts support and CMD support in Intellij is needed to install.
+Intellij should warn about this trying to run the file.
+http://localhost:8080 to enter the Fitnesse wiki server.
+Run ReierTestFit and ReiersTestSlim to test that stuff is working. 
+-Test in menu bar runs the test
+-Edit: Edit the wiki text of the test
+-FitNesse: Home
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

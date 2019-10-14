@@ -1,0 +1,85 @@
+--------------TASK 1 Fitnesse Wiki----------------------------------
+
+a) Verify that Java  is installed 
+b) Check that Fitnesse Stand Alone is installed
+c) Start Fitnesse
+d) Look at the TwoMinuteExample in the user Guide
+e) Run the test
+f) Change the test so that it passes.
+g) Run all the SuiteSlim tests and verify output
+h) Stop the Fitnesse server.
+
+---------------TASK 2 Build and run Java program with unit tests in Intellij---------------------------------
+
+a) Verify that maven is correctly installed
+b) Install the workshop software at C:/git/fitnesse
+   Either use git or unzip.
+   The catalog structure should look like this.
+   C:/git/fitnesse
+   C:/git/fitnesse/fitnesse
+   C:/git/fitnesseSimpleFitTest
+   C:/git/fitnesseSlim
+   C:/car
+   If you use another installation directory, 
+   be aware that some fitnesse pages need to be checked later.
+c) Verify that maven is installed   
+d) Verify that Intellij is installed and you have got a trial or permanent licence   
+e) Start Intellij  
+f) Open Fitnesse project in Intellij (C:\git/fitnesse
+   This projects should contain  the modules
+   car
+   fitnesse
+   fitnesseSimpleFitTest
+   fitnesseSimpleSlimTest
+   fitnesseSlim
+g) Build the car project with maven tool window
+h) Run all the car unit tests from Intellij
+i) Make a new unit test test destination from Oslo to Gjovik in CarTest
+
+---------------TASK 3 Run and modify Reiers Fitnesse tests ReierTestSlim---------------------
+a) By using Fitnesse plugin: 
+	Right click on ReierTestSlim in Intellij Project Browser/fitnesse project and run
+	Right click on ReierTestFit and run
+b) By using Fitnesse wiki:
+   Use the start.bat file in the Fitnesse project (Start it from CMD or Intellij)
+c) Improve the failing test so that it works. 
+d) Run the entire ReierTestSlimSuite from the wiki.  
+e) Study the execution log.
+f) Add another Fitnesse test to the suite that reuses the Java code of fitnesseSimpleSlimTest
+g) Run the entire ReierTestSlimSuite again.
+h) Locate the Java code used in ReierTestSlim
+i) Add you own Java class Division
+   This should work like the MultiplicationClass but 
+   1) return two long numbers divided with each other
+   2) return the remainder also
+j) Write the fitnesse tests to test this and include it in the ReierTest slim suite.
+   Note that is is important that you include a test on division by zero.
+   (If you have got time, you can write regular unit tests to do the same and run it).   
+
+----------------TASK 4 Run and improve a Fitnesse REST test-----------------------------
+a) Run the RestFixtureInstallTest from the Fitnesse Wiki.
+   What does it do, and why does it work?
+b) Run the RestTestSlim test. 
+   Why does it occationally fail on the Vy train?
+   What does it test?
+c) Improve the RestTestSlim test so it checks for the adress returned by the REST service.   
+
+----------------TASK 5 Run and improve a ScriptTable test----------------------------
+a) Run the TrainTrip test
+b) How does the name variable work. Move the variable one level up to ReierTestSlimSuite
+c) Modify the test and use other ScriptTable keywords(ensure, reject, show, note, symbol assigmnent..)
+
+   
+-----------------TASK 6 Run a Fitnesse test as a JUnit test-----------------------------
+a) Open the FitnesseSlim project in a separate Window in Intellij
+b) Run the unit test test.java
+c) Is it any advantage in running it this way?
+d) Study the project setup with the Fitnesse Wiki integrated in the project.
+e) Run fitnesse.bat and start the Wiki.
+f) The Fitnesse pages in this project have the name context.txt and properties.xml. Why?
+g) Rebuild the project
+
+
+   
+   
+   
