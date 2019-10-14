@@ -30,6 +30,7 @@ target/
 */doc/javadoc/
 /fitnesse/FitNesseRoot/FitNesse
 /fitnesse/FitNesseRoot/files/testResults
+/fitnesse/FitNesseRoot/RecentChanges
 
 #Ignore rerunLastFailures.wiki
 /fitnesse/FitNesseRoot/RerunLastFailures.wiki
