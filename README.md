@@ -1,10 +1,10 @@
 # fitnesse
 Repo with simple fitnesse setup, wiki and tests
-Used for Experis Ciber test automation workshop 14.10.2019
+Used for Experis Ciber test automation workshops 2019 and 2021
 
 Fitnesse must be downloaded and fitnesse-standalone copied to fitnesse directory.
 Fitnesse help must be downloaded to FitNesse directory.
-RestFixture is used as one of the examples.
+RestFixture is used as one of the examples. Note: The 2021 course will not focus on RestFixture.
 
 No additional software needed. 
 Everything in here is Open Source.
@@ -22,4 +22,4 @@ The Intellij FitNesse plugin cannot control the logging setup.
 It can be quite tricky sometimes to set up Fitnesse with proper logging.
 Use the fitnesse maven version e.g. to integrate with Log4j or Logback.
 
-Hans Reier Sigmond, 14042019 Moelv.
+Hans Reier Sigmond, 09052021 Moelv.

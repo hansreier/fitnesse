@@ -50,9 +50,9 @@
   <dependencies>
    <!-- Add dependency for junit -->
 	  <dependency>
-		  <groupId>junit</groupId>
-		  <artifactId>junit</artifactId>
-		  <version>4.8.1</version>
+		  <groupId>org.junit.jupiter</groupId>
+		  <artifactId>junit-jupiter-engine</artifactId>
+		  <version>5.7.1</version>
 		  <scope>test</scope>
 	  </dependency>
       <!--cannot be used with Fitnesse-stand alone, so removed>-->

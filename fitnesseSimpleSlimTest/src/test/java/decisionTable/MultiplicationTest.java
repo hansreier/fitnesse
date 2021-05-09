@@ -1,13 +1,12 @@
 package decisionTable;
 
-import static junit.framework.Assert.*;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MultiplicationTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void setup() {
         System.setProperty("java.util.logging.config.file",
                 ClassLoader.getSystemResource("logging.properties").getPath());
@@ -18,6 +17,6 @@ public class MultiplicationTest {
         Multiplication multiplication = new Multiplication();
         multiplication.setOperand1(5);
         multiplication.setOperand2(3);
-        assertEquals("Product", 15, multiplication.product());
+        assertEquals(15, multiplication.product(),"Product");
     }
 }

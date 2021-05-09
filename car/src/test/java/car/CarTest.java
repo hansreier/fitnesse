@@ -1,10 +1,12 @@
 package car;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import places.Location;
 
@@ -13,7 +15,7 @@ public class CarTest {
 	private Car myFerrari = Mockito.mock(Car.class);
 	private Car myAudi = new MyCar();
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		myAudi.emptyFuel();
 	}
@@ -21,19 +23,19 @@ public class CarTest {
 	// Mock
 	@Test
 	public void test() {
-		assertFalse("new test double should return false as boolean", myFerrari.needsFuel());
-		assertEquals("new test double should return 0.0 as double", 0.0, myFerrari.getEngineTemperature(), 0.0000001);
+		assertFalse( myFerrari.needsFuel(),"new test double should return false as boolean");
+		assertEquals( 0.0, myFerrari.getEngineTemperature(), 0.0000001, "new test double should return 0.0 as double");
 
 		when(myFerrari.needsFuel()).thenReturn(true);
 
-		assertTrue("after instructed test double should return what we want", myFerrari.needsFuel());
+		assertTrue( myFerrari.needsFuel(), "after instructed test double should return what we want");
 	}
 
 	// No mock
 	@Test
 	public void test2() {
-		assertTrue("new test double should return false as boolean", myAudi.needsFuel());
-		assertEquals("new test double should return 1.0 as double", 1.0, myAudi.getEngineTemperature(), 0.0000001);
+		assertTrue( myAudi.needsFuel(), "new test double should return false as boolean");
+		assertEquals( 1.0, myAudi.getEngineTemperature(), 0.0000001, "new test double should return 1.0 as double");
 	}
 
 	@Test
@@ -63,10 +65,12 @@ public class CarTest {
 		assertEquals(MyCar.FUELSIZE, myAudi.getFuel(), 0.000000001);
 	}
 
-	@Test(expected = RuntimeException.class)
+	@Test
 	public void throwException() {
-		when(myFerrari.needsFuel()).thenThrow(new RuntimeException());
-		myFerrari.needsFuel();
+		Assertions.assertThrows(RuntimeException.class, () -> {
+			when(myFerrari.needsFuel()).thenThrow(new RuntimeException());
+			myFerrari.needsFuel();
+		});
 	}
 
 	@Test
