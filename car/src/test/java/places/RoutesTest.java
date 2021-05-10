@@ -1,19 +1,17 @@
 package places;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import places.Location;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class RoutesTest {
 	RoutesData routes = new RoutesData();
 
-	@Before
-	public void setUp() throws Exception {
-
+	@BeforeEach
+	public void setUp()  {
 	}
 
 	@Test
@@ -22,13 +20,15 @@ public class RoutesTest {
 		assertEquals(140.0, routes.getDist(Location.OSLO, Location.LILLEHAMMER), 0.0000001);
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testNoRoute() {
-		assertEquals("OSLO_NOPLACE Route", 0, routes.getDist(Location.OSLO, Location.NOPLACE), 0.0000001);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			assertEquals( 0, routes.getDist(Location.OSLO, Location.NOPLACE), 0.0000001, "OSLO_NOPLACE Route");
+		});
 	}
 
 	@Test
 	public void testNoRoute2() {
-		assertNull("OSLO_NOPLACE Route", routes.getDistance(Location.OSLO, Location.NOPLACE));
+		assertNull(routes.getDistance(Location.OSLO, Location.NOPLACE), "OSLO_NOPLACE Route");
 	}
 }

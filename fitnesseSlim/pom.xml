@@ -36,6 +36,11 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<!-- Make the jar like an exe file -->
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
@@ -56,13 +61,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<skipTests>false</skipTests>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 	<packaging>jar</packaging>
@@ -78,7 +76,14 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>5.7.1</version>
-			<!--scope>test</scope-->
+			<scope>test</scope>
+		</dependency>
+		<!-- perhaps needed for old junit4 tests-->
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>5.7.1</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- dependency for slf4j (logging facade/spec) and bind it to log4j -->
 		<dependency>

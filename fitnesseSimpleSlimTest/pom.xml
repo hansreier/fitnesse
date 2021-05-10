@@ -1,79 +1,84 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>fitnesseSimpleSlimTest</groupId>
-  <artifactId>fitnesseSimpleSlimTest</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>fitnesseSimpleSlimTest</name>
-  <description>a simple test of fitnesse slim</description>
-  <build>
-  	<plugins>
-  	<!-- Compiler version -->
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-			<configuration>
-				<release>11</release>
-			</configuration>
-		</plugin>
-  			<plugin>
-  				<groupId>org.apache.maven.plugins</groupId>
-  				<!-- Make the jar like an exe file -->
-  				<artifactId>maven-jar-plugin</artifactId>
-  				<version>2.4</version>
-  			</plugin>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fitnesseSimpleSlimTest</groupId>
+    <artifactId>fitnesseSimpleSlimTest</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>fitnesseSimpleSlimTest</name>
+    <description>a simple test of fitnesse slim</description>
+    <build>
+        <plugins>
+            <!-- Compiler version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.2</version>
-				<executions>
-					<execution>
-						<configuration>
-							<outputDirectory>${project.build.directory}/dependencies</outputDirectory>
-							<excludeArtifactIds>slf4j-jdk14</excludeArtifactIds>
-						</configuration>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-				</execution>
-			</executions>
-		</plugin>
-  	</plugins>
-  </build>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <!-- Make the jar like an exe file -->
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
+                            <excludeArtifactIds>slf4j-jdk14</excludeArtifactIds>
+                        </configuration>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
-  <properties>
-	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <slf4jVersion>1.7.25</slf4jVersion>
-	  <logbackVersion>1.2.3</logbackVersion>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <slf4jVersion>1.7.25</slf4jVersion>
+        <logbackVersion>1.2.3</logbackVersion>
+    </properties>
 
-  <dependencies>
-   <!-- Add dependency for junit -->
-	  <dependency>
-		  <groupId>org.junit.jupiter</groupId>
-		  <artifactId>junit-jupiter-engine</artifactId>
-		  <version>5.7.1</version>
-		  <scope>test</scope>
-	  </dependency>
-      <!--cannot be used with Fitnesse-stand alone, so removed>-->
-	  <!--dependency>
-		  <groupId>ch.qos.logback</groupId>
-		  <artifactId>logback-classic</artifactId>
-		  <version>${logbackVersion}</version>
-	  </dependency-->
-	  <dependency>
-		  <groupId>org.slf4j</groupId>
-		  <artifactId>slf4j-jdk14</artifactId>
-		  <version>1.7.28</version>
-	  </dependency>
+    <dependencies>
+        <!-- Add dependency for junit -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--cannot be used with Fitnesse-stand alone, so removed>-->
+        <!--dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logbackVersion}</version>
+        </dependency-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>1.7.28</version>
+        </dependency>
 
-	  <!--  Restfixture -->
-	  <dependency>
-		<groupId>smartrics.restfixture</groupId>
-		<artifactId>smartrics-RestFixture</artifactId>
-		<version>4.4</version>
-	  </dependency>
+        <!--  Restfixture -->
+        <dependency>
+            <groupId>smartrics.restfixture</groupId>
+            <artifactId>smartrics-RestFixture</artifactId>
+            <version>4.4</version>
+        </dependency>
 
-  </dependencies>
+    </dependencies>
 </project>

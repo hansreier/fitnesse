@@ -1,9 +1,10 @@
 package places;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * @author Reier Actually tests location enum as well
@@ -11,8 +12,8 @@ import org.junit.Test;
  */
 public class RouteTest {
 
-	@Before
-	public void setUp() throws Exception {
+	@BeforeEach
+	public void setUp()  {
 	}
 
 	@Test
