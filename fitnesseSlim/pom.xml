@@ -121,6 +121,12 @@
 			<groupId>smartrics.restfixture</groupId>
 			<artifactId>smartrics-RestFixture</artifactId>
 			<version>4.4</version>
+			<exclusions>
+				<exclusion>  <!-- exclude old fitnesse version that creaates trouble -->
+					<groupId>org.fitnesse</groupId>
+					<artifactId>fitnesse</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 </project>
