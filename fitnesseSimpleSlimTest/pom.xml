@@ -49,7 +49,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slf4jVersion>1.7.25</slf4jVersion>
+        <slf4jVersion>1.7.30</slf4jVersion>
         <logbackVersion>1.2.3</logbackVersion>
     </properties>
 
@@ -61,17 +61,17 @@
             <version>5.7.1</version>
             <scope>test</scope>
         </dependency>
-        <!--cannot be used with Fitnesse-stand alone, so removed>-->
-        <!--dependency>
+        <!--Used instead of jdk14 included in standalone else no log output (Warning in log when running)-->
+        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logbackVersion}</version>
-        </dependency-->
-        <dependency>
+        </dependency>
+        <!--dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
             <version>1.7.28</version>
-        </dependency>
+        </dependency-->
 
         <!--  Restfixture 2017 latest version-->
         <dependency>
