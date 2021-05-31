@@ -15,4 +15,4 @@ Test
 | operand1 | operand2 | product?|
 | 3        | 5        | 15      |
 | 4        | 6        | 24      |
-| 2        | 3        | 7       |
+| 2        | 3        | 8       |
