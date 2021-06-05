@@ -54,13 +54,13 @@
         <dependency>
             <groupId>pl.pragmatists</groupId>
             <artifactId>JUnitParams</artifactId>
-            <version>1.0.3</version>
+            <version>1.1.1</version>
         </dependency>
         <!-- Add dependency for mockito -->
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.0</version>
+            <artifactId>mockito-core</artifactId>
+            <version>3.11.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
