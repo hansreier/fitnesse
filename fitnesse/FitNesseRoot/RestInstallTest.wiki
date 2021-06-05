@@ -1,9 +1,10 @@
 #This test checks if RestFixture is properly installed
+
 !contents -R2 -g -p -f -h
 !define TEST_SYSTEM {slim}
-
 !path C:/git/fitnesse/fitnesseSimpleSlimTest/target/dependencies/*
 !path C:/git/fitnesse/fitnesseSimpleSlimTest/target/*.jar
 
-|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8080 |
-| GET | /RestFixtureInstallTest?rss | | | //title[text()='RestFixtureInstallTest']|
+
+| Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8080 |
+| GET | /RestInstallTest?rss | 200 | Content-Type : text/html  |//title[text()='RestInstallTest'] |
